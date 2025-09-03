@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const albumRoutes = require('./routes/albums');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Security middleware
 app.use(helmet());
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/albums', albumRoutes);
+app.use('/albums', albumRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
