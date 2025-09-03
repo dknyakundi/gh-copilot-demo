@@ -11,6 +11,7 @@ var app = express();
 app.set("env", process.env.NODE_ENV);
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/semantic-ui-css", express.static(path.join(__dirname, "node_modules/semantic-ui-css")));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
